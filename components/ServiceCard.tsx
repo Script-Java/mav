@@ -2,6 +2,7 @@
 
 import React from "react";
 import { motion } from "framer-motion";
+import Link from "next/link";
 import SafeImage from "./ClientImage";
 
 interface ServiceCardProps {
@@ -17,7 +18,7 @@ export default function ServiceCard({ title, description, icon, imageSrc }: Serv
       whileHover={{ y: -8, scale: 1.02 }}
       whileTap={{ scale: 0.98 }}
       transition={{ type: "spring", stiffness: 300, damping: 20 }}
-      className="relative group overflow-hidden rounded-3xl p-8 border border-white/10 bg-white/5 backdrop-blur-xl shadow-lg"
+      className="relative group overflow-hidden rounded-3xl p-8 border border-white/10 bg-white/5 backdrop-blur-xl shadow-lg h-full flex flex-col"
     >
       {/* Subtle top glow effect */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-1/2 h-[1px] bg-gradient-to-r from-transparent via-white/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
@@ -30,7 +31,7 @@ export default function ServiceCard({ title, description, icon, imageSrc }: Serv
               alt={title} 
               fill 
               sizes="(max-width: 768px) 100vw, 50vw"
-              className="object-cover"
+              className={`object-cover ${title.includes("Funilaria") ? "object-bottom" : "object-center"}`}
             />
           </div>
         )}
@@ -44,12 +45,12 @@ export default function ServiceCard({ title, description, icon, imageSrc }: Serv
           {description}
         </p>
         
-        <div className="mt-8 flex items-center text-sm font-medium tracking-wider uppercase text-zinc-400 group-hover:text-white transition-colors cursor-pointer w-max">
+        <Link href="/contato" className="mt-8 flex items-center text-sm font-medium tracking-wider uppercase text-zinc-400 group-hover:text-white transition-colors cursor-pointer w-max">
           <span className="mr-3">Explorar</span>
           <svg className="w-5 h-5 group-hover:translate-x-2 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M14 5l7 7m0 0l-7 7m7-7H3" />
           </svg>
-        </div>
+        </Link>
       </div>
       
       {/* Subtle hover background gradient */}

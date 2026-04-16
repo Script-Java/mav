@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
@@ -148,12 +149,12 @@ export default function Hero({ slides }: HeroProps) {
 
         {/* CTAs */}
         <div className="flex flex-col sm:flex-row gap-4 items-center justify-center mt-8">
-          <button className="px-8 py-4 bg-[#ff4500] text-white text-sm font-semibold tracking-wider uppercase rounded-full hover:bg-[#e03e00] shadow-lg shadow-[#ff4500]/20 transition-all duration-200">
+          <Link href="/contato" className="px-8 py-4 bg-[#ff4500] text-white text-sm font-semibold tracking-wider uppercase rounded-full hover:bg-[#e03e00] shadow-lg shadow-[#ff4500]/20 transition-all duration-200">
             Agendar Avaliação
-          </button>
-          <button className="px-8 py-4 text-white text-sm font-semibold tracking-wider uppercase rounded-full border border-white/20 hover:bg-white/10 backdrop-blur-sm transition-all duration-200">
+          </Link>
+          <Link href="/contato" className="px-8 py-4 text-white text-sm font-semibold tracking-wider uppercase rounded-full border border-white/20 hover:bg-white/10 backdrop-blur-sm transition-all duration-200">
             Conheça o Studio
-          </button>
+          </Link>
         </div>
       </div>
 

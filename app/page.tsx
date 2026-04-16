@@ -8,18 +8,18 @@ import { Wrench, Paintbrush, Sparkles, Hammer } from "lucide-react";
 const heroSlides = [
   {
     title: "Estética Automotiva de Alta Performance",
-    subtitle: "Elevando o padrão automotivo com tecnologia, precisão e acabamento impecável para clientes exigentes.",
-    backgroundImageSrc: "/hero-bg.png"
+    subtitle: "Na Maverick Collision, elevamos o padrão da estética automotiva. Combinamos tecnologia de ponta, processos meticulosos e uma verdadeira paixão por carros para entregar resultados impecáveis, superando as expectativas dos clientes mais exigentes.",
+    backgroundImageSrc: "/hero-slide-1.jpg"
   },
   {
-    title: "Repintura Premium",
-    subtitle: "Vernizes importados e cura em laboratório para perfeição tridimensional incomparável.",
-    backgroundImageSrc: "/placeholder-car.jpg"
+    title: "Pintura Premium",
+    subtitle: "A Maverick Collision orgulha-se de utilizar AkzoNobel Sikkens, uma das linhas mais avançadas do mundo em repintura automotiva. Esse padrão global nos permite garantir fidelidade absoluta de cor, brilho tridimensional e durabilidade incomparável para o seu veículo.",
+    backgroundImageSrc: "/hero-slide-2.png"
   },
   {
     title: "Funilaria de Precisão",
-    subtitle: "Recuperação estrutural definitiva. Manutenção 100% da originalidade garantida.",
-    backgroundImageSrc: "/placeholder-car.jpg"
+    subtitle: "Nossa funilaria é sinônimo de excelência técnica. Na Maverick Collision, utilizamos gabaritos e equipamentos de última geração para realizar a recuperação estrutural milimétrica, preservando a segurança e garantindo a manutenção 100% da originalidade de fábrica.",
+    backgroundImageSrc: "/hero-slide-3.jpg"
   }
 ];
 
@@ -30,30 +30,30 @@ const servicesData = {
     {
       id: "funilaria",
       title: "Funilaria de Precisão",
-      description: "Restauração estrutural milimétrica, mantendo a originalidade e segurança do seu veículo com equipamentos de última geração.",
+      description: "A funilaria de precisão é a base estrutural para a recuperação perfeita de um automóvel. Utilizamos equipamentos de alta tecnologia e gabaritos modernos para realizar o alinhamento tridimensional milimétrico da carroceria. Nosso processo rigoroso garante a reparação de danos complexos enquanto conserva perfeitamente as linhas, vincos e soldas de fábrica, devolvendo a originalidade impecável e a segurança absoluta do seu veículo.",
       icon: <Wrench className="w-7 h-7" />,
-      imageSrc: "/placeholder-car.jpg"
+      imageSrc: "/service1.jpg"
     },
     {
       id: "pintura",
       title: "Pintura Premium",
-      description: "Acabamento de alto brilho e durabilidade utilizando tintas e vernizes importados, garantindo a tonalidade perfeita original.",
+      description: "Nosso serviço de pintura automotiva premium restaura a originalidade e o brilho de fábrica do seu veículo com técnicas de ponta. Inclui preparação minuciosa, uso de tintas de alta qualidade, aplicação de verniz (clear coat) de alta resistência, cura em cabine e polimento final. Garantimos acabamento impecável, durabilidade e cor uniforme",
       icon: <Paintbrush className="w-7 h-7" />,
-      imageSrc: "/placeholder-car.jpg"
+      imageSrc: "/service2.jpg"
     },
     {
       id: "polimento",
       title: "Polimento Técnico",
-      description: "Correção de pintura detalhada em múltiplos estágios para um brilho vitrificado, eliminando riscos e imperfeições.",
+      description: "A correção de pintura premium é um polimento técnico de alto nível que remove riscos, hologramas e imperfeições do verniz, devolvendo o brilho espelhado e a cor original do veículo. Utilizando compostos técnicos e iluminação especial, o serviço restaura a pintura, eliminando defeitos superficiais e preparando-a para proteção duradoura, como vitrificação.",
       icon: <Sparkles className="w-7 h-7" />,
-      imageSrc: "/placeholder-car.jpg"
+      imageSrc: "/service3.jpg"
     },
     {
       id: "martelinho",
       title: "Martelinho de Ouro",
-      description: "Remoção de desgastes e amassados mantendo a pintura original 100% intacta, ideal para pequenos reparos com rápidez.",
+      description: "O martelinho de ouro é uma técnica artesanal de funilaria que remove amassados de veículos sem danificar a pintura original. Utilizando ferramentas especiais e alavancas, profissionais moldam a lataria de dentro para fora, devolvendo a forma original com precisão. É ideal para pequenos/médios danos (granizo, batidas de porta), oferecendo reparo rápido, econômico e ecológico",
       icon: <Hammer className="w-7 h-7" />,
-      imageSrc: "/placeholder-car.jpg"
+      imageSrc: "/service4.jpg"
     }
   ]
 };

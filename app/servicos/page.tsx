@@ -89,7 +89,7 @@ export default function ServicosPage() {
             <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-white/10 bg-white/5 backdrop-blur-sm mb-8">
               <span className="w-1.5 h-1.5 rounded-full bg-[#ff4500] animate-pulse" />
               <span className="text-xs uppercase tracking-[0.2em] text-zinc-400 font-medium">
-                Studio Automotivo Premium
+                Padrão Maverick Collision
               </span>
             </div>
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white tracking-tighter mb-6 leading-none">
@@ -99,9 +99,9 @@ export default function ServicosPage() {
                 de Serviços
               </span>
             </h1>
-            <p className="text-lg text-zinc-400 font-light leading-relaxed max-w-xl mx-auto">
-              Cada veículo que entra no nosso studio é tratado como uma obra de arte única.
-              Precisão e obsessão pela perfeição em cada detalhe.
+            <p className="text-lg text-zinc-400 font-light leading-relaxed max-w-2xl mx-auto">
+              Na Maverick Collision, cada veículo que entra em nossa oficina é tratado como uma verdadeira obra de arte. 
+              Combinamos artesanato tradicional com tecnologia automotiva de ponta para entregar precisão absoluta, segurança estrutural e um rigor estético incomparável. Descubra o verdadeiro estado da arte automotiva.
             </p>
           </div>
         </FramerReveal>

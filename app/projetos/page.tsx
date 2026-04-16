@@ -10,17 +10,17 @@ export const metadata = {
 const projetos = [
   {
     id: "proj-1",
-    titulo: "Restauração Porsche 911",
-    descricao: "Polimento técnico e vitrificação completa.",
-    imgAntes: "/placeholder-car.jpg", // Mock images
-    imgDepois: "/placeholder-car.jpg"
+    titulo: "Restauração Profunda & Vitrificação",
+    descricao: "O mais alto rigor da estética automotiva. Correção intensiva do verniz acompanhada de polimento em múltiplas etapas e vitrificação premium para selar o acabamento, atestando o padrão da Maverick Collision em proteção e brilho.",
+    imgAntes: "/assets/b1.jpeg",
+    imgDepois: "/assets/a1.jpeg"
   },
   {
     id: "proj-2",
-    titulo: "Pintura Premium BMW M3",
-    descricao: "Pintura completa com tonalidade original de fábrica.",
-    imgAntes: "/placeholder-car.jpg",
-    imgDepois: "/placeholder-car.jpg"
+    titulo: "Pintura Premium Maverick",
+    descricao: "Repintura executada sob rigoroso controle de qualidade e assepsia. Utilização do sistema de cura otimizado e tintas de alto padrão para entregar não apenas a tonalidade original de fábrica, mas um nivelamento e brilho absolutamente perfeitos.",
+    imgAntes: "/assets/b2.jpeg",
+    imgDepois: "/assets/a2.jpeg"
   }
 ];
 
@@ -31,10 +31,10 @@ export default function ProjetosPage() {
         <FadeIn>
           <div className="mb-16 text-center max-w-3xl mx-auto">
             <h1 className="text-4xl md:text-5xl font-bold text-white tracking-tighter mb-6">
-              Nossos Projetos
+              Portfólio Maverick
             </h1>
             <p className="text-lg text-zinc-400 font-light leading-relaxed">
-              O resultado da nossa obsessão pela perfeição. Arraste para comparar o antes e depois.
+              A excelência automotiva não é prometida, ela é demonstrada. Explore a nossa galeria tátil de antes e depois e compreenda como a Maverick Collision materializa seus conceitos com transformações visuais definitivas.
             </p>
           </div>
         </FadeIn>
@@ -49,33 +49,26 @@ export default function ProjetosPage() {
                 </div>
                 
                 <div className="w-full lg:w-2/3 grid grid-cols-2 gap-4">
-                  <div className="relative aspect-video rounded-2xl overflow-hidden border border-white/10 bg-white/5 backdrop-blur-xl">
-                    <div className="absolute top-4 left-4 z-10 px-3 py-1 bg-black/50 backdrop-blur-md rounded-full border border-white/10 text-xs font-semibold text-white tracking-wider uppercase">Antes</div>
-                    <div className="absolute inset-0 bg-zinc-800 flex items-center justify-center text-zinc-500">
-                      {/* Placeholder fallbacks since actual imagery might be missing */}
-                      <SafeImage 
-                        src={projeto.imgAntes} 
-                        alt={`${projeto.titulo} Antes`} 
-                        fill 
-                        sizes="(max-width: 768px) 100vw, 50vw"
-                        className="object-cover opacity-50"
-                      />
-                      <span>Imagem Pré-Operação</span>
-                    </div>
+                  <div className="relative aspect-video rounded-2xl overflow-hidden border border-white/10">
+                    <div className="absolute top-4 left-4 z-10 px-3 py-1 bg-black/60 backdrop-blur-md rounded-full border border-white/10 text-xs font-semibold text-white tracking-wider uppercase">Antes</div>
+                    <SafeImage 
+                      src={projeto.imgAntes} 
+                      alt={`${projeto.titulo} Antes`} 
+                      fill 
+                      sizes="(max-width: 768px) 100vw, 50vw"
+                      className="object-cover"
+                    />
                   </div>
                   
-                  <div className="relative aspect-video rounded-2xl overflow-hidden border border-white/10 bg-white/5 backdrop-blur-xl">
+                  <div className="relative aspect-video rounded-2xl overflow-hidden border border-white/10">
                     <div className="absolute top-4 right-4 z-10 px-3 py-1 bg-[#ff4500]/80 backdrop-blur-md rounded-full border border-white/10 text-xs font-semibold text-white tracking-wider uppercase">Depois</div>
-                    <div className="absolute inset-0 bg-neutral-900 flex items-center justify-center text-zinc-500">
-                      <SafeImage 
-                        src={projeto.imgDepois} 
-                        alt={`${projeto.titulo} Depois`} 
-                        fill 
-                        sizes="(max-width: 768px) 100vw, 50vw"
-                        className="object-cover opacity-50"
-                      />
-                      <span>Resultado Premium</span>
-                    </div>
+                    <SafeImage 
+                      src={projeto.imgDepois} 
+                      alt={`${projeto.titulo} Depois`} 
+                      fill 
+                      sizes="(max-width: 768px) 100vw, 50vw"
+                      className="object-cover"
+                    />
                   </div>
                 </div>
               </div>
