@@ -1,0 +1,137 @@
+import { SectionWrapper } from "@/components/SectionWrapper";
+import ServicesGrid from "@/components/ServicesGrid";
+import { FramerReveal } from "@/components/FramerReveal";
+import {
+  Hammer,
+  ShieldCheck,
+  Sparkles,
+  Microscope,
+  Wrench,
+  Paintbrush2,
+} from "lucide-react";
+
+export const metadata = {
+  title: "Serviços | Mavericks Collision",
+  description:
+    "Conheça nosso portfólio completo: Martelinho de Ouro, PPF, Vitrificação Cerâmica, Detalhamento, Funilaria e Pintura Premium — tudo realizado com precisão absoluta.",
+};
+
+const services = [
+  {
+    id: "martelinho",
+    title: "Martelinho de Ouro",
+    description:
+      "Remoção de amassados e mossas com PDR (Paintless Dent Repair) — sem pintura, sem perda de valor. Técnica milimétrica que preserva 100% o verniz original de fábrica.",
+    icon: <Hammer className="w-5 h-5" />,
+    imageSrc: "/images/martelinho-detail.jpg",
+    imageAlt: "Técnico realizando martelinho de ouro em painel de veículo",
+    priority: true,
+    badge: "PDR",
+  },
+  {
+    id: "ppf",
+    title: "PPF — Película de Proteção",
+    description:
+      "Paint Protection Film de última geração. Blindagem invisível contra pedriscos, riscos e agentes químicos. Auto-reparação térmica integrada para proteção definitiva.",
+    icon: <ShieldCheck className="w-5 h-5" />,
+    imageSrc: "/images/ppf-application.jpg",
+    imageAlt: "Aplicação de PPF Paint Protection Film em capô de veículo",
+    priority: true,
+    badge: "Proteção Total",
+  },
+  {
+    id: "vitrificacao",
+    title: "Vitrificação Cerâmica",
+    description:
+      "Nano-revestimento cerâmico SiO₂ de alta concentração: hidrofobicidade extrema, brilho profundo e proteção UV de longa duração. Superfície virtualmente inatingível.",
+    icon: <Sparkles className="w-5 h-5" />,
+    imageSrc: "/images/vitrificacao-ceramic.jpg",
+    imageAlt: "Efeito de hidrofobicidade em pintura vitrificada com cerâmica",
+  },
+  {
+    id: "detalhamento",
+    title: "Detalhamento Profissional",
+    description:
+      "Restauração completa interior e exterior com higienização profunda, renovação de plásticos, polimento de faróis e hidratação de couro. O veículo de volta ao showroom.",
+    icon: <Microscope className="w-5 h-5" />,
+    imageSrc: "/images/detalhamento-detail.jpg",
+    imageAlt: "Processo de detalhamento automotivo interior premium",
+  },
+  {
+    id: "funilaria",
+    title: "Funilaria de Precisão",
+    description:
+      "Reparos estruturais com alinhamento tridimensional por escaneamento a laser. Geometria do veículo 100% restaurada com peças originais e soldagem certificada.",
+    icon: <Wrench className="w-5 h-5" />,
+    imageSrc: "/images/funilaria-bodywork.jpg",
+    imageAlt: "Funilaria de precisão com alinhamento estrutural em oficina premium",
+  },
+  {
+    id: "pintura",
+    title: "Pintura Premium",
+    description:
+      "Mistura computadorizada de tintas importadas com câmara de cura UV para fidelidade total à cor original. Acabamento de concessionária com garantia de brilho estendida.",
+    icon: <Paintbrush2 className="w-5 h-5" />,
+    imageSrc: "/images/pintura-paint.jpg",
+    imageAlt: "Aplicação de pintura automotiva premium em cabine de pintura profissional",
+    badge: "Premium",
+  },
+];
+
+export default function ServicosPage() {
+  return (
+    <div className="min-h-screen bg-[#050505]">
+      <SectionWrapper className="pt-32 pb-24">
+
+        {/* Header */}
+        <FramerReveal>
+          <div className="mb-20 text-center max-w-3xl mx-auto">
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-white/10 bg-white/5 backdrop-blur-sm mb-8">
+              <span className="w-1.5 h-1.5 rounded-full bg-[#ff4500] animate-pulse" />
+              <span className="text-xs uppercase tracking-[0.2em] text-zinc-400 font-medium">
+                Studio Automotivo Premium
+              </span>
+            </div>
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white tracking-tighter mb-6 leading-none">
+              Nosso Portfólio
+              <br />
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#ff4500] to-[#ff7c00]">
+                de Serviços
+              </span>
+            </h1>
+            <p className="text-lg text-zinc-400 font-light leading-relaxed max-w-xl mx-auto">
+              Cada veículo que entra no nosso studio é tratado como uma obra de arte única.
+              Precisão e obsessão pela perfeição em cada detalhe.
+            </p>
+          </div>
+        </FramerReveal>
+
+        {/* Grid */}
+        <ServicesGrid services={services} />
+
+        {/* Bottom CTA Strip */}
+        <FramerReveal delay={0.3}>
+          <div className="mt-24 p-px rounded-2xl bg-gradient-to-r from-white/5 via-white/10 to-white/5">
+            <div className="rounded-2xl bg-white/[0.02] backdrop-blur-xl px-8 py-10 flex flex-col md:flex-row items-center justify-between gap-6">
+              <div>
+                <h3 className="text-2xl font-bold text-white tracking-tight mb-1">
+                  Pronto para elevar seu veículo?
+                </h3>
+                <p className="text-zinc-400 text-sm">
+                  Solicite uma avaliação gratuita com nossos especialistas.
+                </p>
+              </div>
+              <a
+                href="/contato"
+                className="flex-shrink-0 px-8 py-4 bg-[#ff4500] text-white text-sm font-semibold tracking-wider uppercase rounded-full hover:bg-[#e03e00] transition-all duration-200 shadow-lg shadow-[#ff4500]/20"
+              >
+                Agendar Avaliação
+              </a>
+            </div>
+          </div>
+        </FramerReveal>
+
+      </SectionWrapper>
+    </div>
+  );
+}
