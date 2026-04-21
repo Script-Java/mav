@@ -18,7 +18,7 @@ export default function ProcessSection() {
     },
     {
       title: "Controle de Qualidade",
-      description: "Inspeção rigorosa de cada detalhe para certificar que o resultado atenda ao nosso padrão premium.",
+      description: "Inspeção rigorosa de cada detalhe para certificar que o resultado atenda ao nosso padrão.",
       icon: <ShieldCheck className="w-8 h-8 text-neutral-300" />,
       number: "03"
     },

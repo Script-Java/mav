@@ -14,7 +14,7 @@ export default function ContatoPage() {
         <FadeIn>
           <div className="text-center max-w-3xl mx-auto mb-4">
             <h1 className="text-4xl md:text-5xl font-bold text-white tracking-tighter mb-4">
-              Agende sua Avaliação na <span className="text-[#ff4500]">Maverick Collision</span>
+              Agende sua Avaliação na <span className="text-[#ff4500]">Mavericks Collision</span>
             </h1>
             <p className="text-lg text-zinc-400 font-light mb-8">
               Sua jornada para um veículo impecável começa aqui. Nossa equipe técnica especializada está pronta para entender as necessidades do seu carro e oferecer soluções sob medida, desde pequenos reparos até projetos de restauração complexos.

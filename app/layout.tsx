@@ -9,7 +9,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: 'Mavericks Collision | Funilaria e Estética Automotiva',
-  description: 'Excelência em funilaria de precisão, pintura premium e martelinho de ouro em Frisco e North Texas.',
+  description: 'Excelência em funilaria de precisão, pintura e martelinho de ouro em Frisco e North Texas.',
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

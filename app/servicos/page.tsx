@@ -13,7 +13,7 @@ import {
 export const metadata = {
   title: "Serviços | Mavericks Collision",
   description:
-    "Conheça nosso portfólio completo: Martelinho de Ouro, PPF, Vitrificação Cerâmica, Detalhamento, Funilaria e Pintura Premium — tudo realizado com precisão absoluta.",
+    "Conheça nosso portfólio completo: Martelinho de Ouro, PPF, Vitrificação Cerâmica, Detalhamento, Funilaria e Pintura — tudo realizado com precisão absoluta.",
 };
 
 const services = [
@@ -23,7 +23,7 @@ const services = [
     description:
       "Remoção de amassados e mossas com PDR (Paintless Dent Repair) — sem pintura, sem perda de valor. Técnica milimétrica que preserva 100% o verniz original de fábrica.",
     icon: <Hammer className="w-5 h-5" />,
-    imageSrc: "/images/martelinho-detail.jpg",
+    imageSrc: "/images/martelinho-detail.jpeg",
     imageAlt: "Técnico realizando martelinho de ouro em painel de veículo",
     priority: true,
     badge: "PDR",
@@ -34,7 +34,7 @@ const services = [
     description:
       "Paint Protection Film de última geração. Blindagem invisível contra pedriscos, riscos e agentes químicos. Auto-reparação térmica integrada para proteção definitiva.",
     icon: <ShieldCheck className="w-5 h-5" />,
-    imageSrc: "/images/ppf-application.jpg",
+    imageSrc: "/images/martelinho-detail.jpg",
     imageAlt: "Aplicação de PPF Paint Protection Film em capô de veículo",
     priority: true,
     badge: "Proteção Total",
@@ -55,7 +55,7 @@ const services = [
       "Restauração completa interior e exterior com higienização profunda, renovação de plásticos, polimento de faróis e hidratação de couro. O veículo de volta ao showroom.",
     icon: <Microscope className="w-5 h-5" />,
     imageSrc: "/images/detalhamento-detail.jpg",
-    imageAlt: "Processo de detalhamento automotivo interior premium",
+    imageAlt: "Processo de detalhamento automotivo interior",
   },
   {
     id: "funilaria",
@@ -64,17 +64,17 @@ const services = [
       "Reparos estruturais com alinhamento tridimensional por escaneamento a laser. Geometria do veículo 100% restaurada com peças originais e soldagem certificada.",
     icon: <Wrench className="w-5 h-5" />,
     imageSrc: "/images/funilaria-bodywork.jpg",
-    imageAlt: "Funilaria de precisão com alinhamento estrutural em oficina premium",
+    imageAlt: "Funilaria de precisão com alinhamento estrutural em oficina",
   },
   {
     id: "pintura",
-    title: "Pintura Premium",
+    title: "Pintura",
     description:
       "Mistura computadorizada de tintas importadas com câmara de cura UV para fidelidade total à cor original. Acabamento de concessionária com garantia de brilho estendida.",
     icon: <Paintbrush2 className="w-5 h-5" />,
     imageSrc: "/images/pintura-paint.jpg",
-    imageAlt: "Aplicação de pintura automotiva premium em cabine de pintura profissional",
-    badge: "Premium",
+    imageAlt: "Aplicação de pintura automotiva em cabine de pintura profissional",
+    badge: "Especializado",
   },
 ];
 
@@ -89,7 +89,7 @@ export default function ServicosPage() {
             <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-white/10 bg-white/5 backdrop-blur-sm mb-8">
               <span className="w-1.5 h-1.5 rounded-full bg-[#ff4500] animate-pulse" />
               <span className="text-xs uppercase tracking-[0.2em] text-zinc-400 font-medium">
-                Padrão Maverick Collision
+                Padrão Mavericks Collision
               </span>
             </div>
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white tracking-tighter mb-6 leading-none">
@@ -100,7 +100,7 @@ export default function ServicosPage() {
               </span>
             </h1>
             <p className="text-lg text-zinc-400 font-light leading-relaxed max-w-2xl mx-auto">
-              Na Maverick Collision, cada veículo que entra em nossa oficina é tratado como uma verdadeira obra de arte. 
+              Na Mavericks Collision, cada veículo que entra em nossa oficina é tratado como uma verdadeira obra de arte.
               Combinamos artesanato tradicional com tecnologia automotiva de ponta para entregar precisão absoluta, segurança estrutural e um rigor estético incomparável. Descubra o verdadeiro estado da arte automotiva.
             </p>
           </div>

@@ -43,11 +43,11 @@ export default function Services({ title, subtitle, services }: ServicesProps) {
           </div>
         </div>
       </FadeIn>
-      
+
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
         {services.map((service, index) => (
           <FadeIn key={service.id} delay={0.2 + (index * 0.1)}>
-            <ServiceCard 
+            <ServiceCard
               title={service.title}
               description={service.description}
               icon={service.icon}

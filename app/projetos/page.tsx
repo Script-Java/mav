@@ -11,13 +11,13 @@ const projetos = [
   {
     id: "proj-1",
     titulo: "Restauração Profunda & Vitrificação",
-    descricao: "O mais alto rigor da estética automotiva. Correção intensiva do verniz acompanhada de polimento em múltiplas etapas e vitrificação premium para selar o acabamento, atestando o padrão da Maverick Collision em proteção e brilho.",
+    descricao: "O mais alto rigor da estética automotiva. Correção intensiva do verniz acompanhada de polimento em múltiplas etapas e vitrificação para selar o acabamento, atestando o padrão da Mavericks Collision em proteção e brilho.",
     imgAntes: "/assets/b1.jpeg",
     imgDepois: "/assets/a1.jpeg"
   },
   {
     id: "proj-2",
-    titulo: "Pintura Premium Maverick",
+    titulo: "Pintura Mavericks",
     descricao: "Repintura executada sob rigoroso controle de qualidade e assepsia. Utilização do sistema de cura otimizado e tintas de alto padrão para entregar não apenas a tonalidade original de fábrica, mas um nivelamento e brilho absolutamente perfeitos.",
     imgAntes: "/assets/b2.jpeg",
     imgDepois: "/assets/a2.jpeg"
@@ -31,10 +31,10 @@ export default function ProjetosPage() {
         <FadeIn>
           <div className="mb-16 text-center max-w-3xl mx-auto">
             <h1 className="text-4xl md:text-5xl font-bold text-white tracking-tighter mb-6">
-              Portfólio Maverick
+              Portfólio Mavericks
             </h1>
             <p className="text-lg text-zinc-400 font-light leading-relaxed">
-              A excelência automotiva não é prometida, ela é demonstrada. Explore a nossa galeria tátil de antes e depois e compreenda como a Maverick Collision materializa seus conceitos com transformações visuais definitivas.
+              A excelência automotiva não é prometida, ela é demonstrada. Explore a nossa galeria tátil de antes e depois e compreenda como a Mavericks Collision materializa seus conceitos com transformações visuais definitivas.
             </p>
           </div>
         </FadeIn>
