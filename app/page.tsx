@@ -2,58 +2,60 @@ import Hero from "@/components/Hero";
 import Services from "@/components/Services";
 import ProcessSection from "@/components/ProcessSection";
 import ContactForm from "@/components/ContactForm";
-import { Wrench, Paintbrush, Sparkles, Hammer, Shield } from "lucide-react";
+import FAQSection from "@/components/FAQSection";
+import TrustIndicators from "@/components/TrustIndicators";
+import BeforeAfterShowcase from "@/components/BeforeAfterShowcase";
+import { Paintbrush, Sparkles, Hammer, Shield } from "lucide-react";
 
-// Data passed as props representing potential CMS data
 const heroSlides = [
   {
-    title: "Estética Automotiva",
-    subtitle: "Na Mavericks Collision, elevamos o padrão da estética automotiva. Combinamos tecnologia de ponta, processos meticulosos e uma verdadeira paixão por carros para entregar resultados impecáveis, superando as expectativas dos clientes mais exigentes.",
-    backgroundImageSrc: "/hero-slide-1.jpg"
+    title: "Especialistas em Funilaria e Pintura em Curitiba",
+    subtitle: "A Mavericks Collision é a referência em estética automotiva de alto padrão em Curitiba. Combinamos artesanato premium e tecnologia avançada para carros de luxo e clientes exigentes.",
+    backgroundImageSrc: "/assets/a1.jpeg" // Using actual project photo
   },
   {
-    title: "Paint Protection Film (PPF)",
-    subtitle: "A proteção definitiva para o seu veículo. Aplicamos tecnologia de ponta com filmes autorregenerativos que criam uma barreira invisível contra riscos, impactos e intempéries, preservando o brilho original e a integridade da pintura com máxima durabilidade.",
-    backgroundImageSrc: "/hero-slide-2.png"
+    title: "PPF Curitiba: Proteção Absoluta",
+    subtitle: "Aplicação premium de Paint Protection Film (PPF) em Curitiba. Uma blindagem invisível que preserva a pintura do seu veículo contra riscos e impactos do dia a dia, com acabamento nível concessionária.",
+    backgroundImageSrc: "/assets/11.22.21.jpeg" // Showcase high-end lighting/studio
   },
   {
-    title: "Martelinho de Ouro",
-    subtitle: "O martelinho de ouro é uma técnica artesanal de funilaria que remove amassados de veículos sem danificar a pintura original. Utilizando ferramentas especiais e alavancas, profissionais moldam a lataria de dentro para fora, devolvendo a forma original com precisão. É ideal para pequenos/médios danos (granizo, batidas de porta), oferecendo reparo rápido, econômico e ecológico",
-    backgroundImageSrc: "/hero-slide-3.jpg"
+    title: "Martelinho de Ouro Premium",
+    subtitle: "Remoção cirúrgica de amassados com preservação 100% da pintura original. Nossa equipe técnica especializada em Curitiba garante que a estrutura e estética do seu carro de luxo sejam mantidas impecáveis.",
+    backgroundImageSrc: "/assets/11.21.08.jpeg" // Detail shot
   }
 ];
 
 const servicesData = {
-  title: "Nossos Serviços",
-  subtitle: "Especialidade para o cuidado absoluto do seu veículo.",
+  title: "Excelência em Estética Automotiva",
+  subtitle: "Soluções de alto padrão para quem exige a perfeição em cada detalhe.",
   items: [
     {
-      id: "ppf",
-      title: "PPF",
-      description: "O serviço de PPF (Paint Protection Film) oferece uma blindagem invisível de poliuretano de alta tecnologia, protegendo a pintura contra riscos, pedras, detritos, marcas de lavagem e raios UV. Com capacidade de autocicatrização (auto-healing) e garantia de longa duração (5 a 10 anos), o PPF mantém o brilho original, valoriza a revenda e facilita a limpeza.",
-      icon: <Shield className="w-7 h-7" />,
-      imageSrc: "/service1.jpg"
-    },
-    {
-      id: "pintura",
-      title: "Pintura",
-      description: "Nosso serviço de pintura automotiva restaura a originalidade e o brilho de fábrica do seu veículo com técnicas de ponta. Inclui preparação minuciosa, uso de tintas de alta qualidade, aplicação de verniz (clear coat) de alta resistência, cura em cabine e polimento final. Garantimos acabamento impecável, durabilidade e cor uniforme",
+      id: "funilaria-pintura",
+      title: "Funilaria e Pintura Premium",
+      description: "Reparo automotivo em Curitiba com alinhamento milimétrico, uso de materiais importados e cabine de pintura de última geração. Acabamento impecável e garantia absoluta.",
       icon: <Paintbrush className="w-7 h-7" />,
-      imageSrc: "/service2.jpg"
+      imageSrc: "/assets/a2.jpeg"
     },
     {
-      id: "polimento",
-      title: "Polimento Técnico",
-      description: "A correção de pintura é um polimento técnico de alto nível que remove riscos, hologramas e imperfeições do verniz, devolvendo o brilho espelhado e a cor original do veículo. Utilizando compostos técnicos e iluminação especial, o serviço restaura a pintura, eliminando defeitos superficiais e preparando-a para proteção duradoura, como vitrificação.",
-      icon: <Sparkles className="w-7 h-7" />,
-      imageSrc: "/service3.jpg"
+      id: "ppf",
+      title: "PPF (Paint Protection Film)",
+      description: "Blindagem de poliuretano com tecnologia auto-healing (autocicatrizante). Proteção definitiva contra pedras, riscos e marcas de lavagem, mantendo o brilho impecável.",
+      icon: <Shield className="w-7 h-7" />,
+      imageSrc: "/assets/11.21.39.jpeg"
     },
     {
       id: "martelinho",
       title: "Martelinho de Ouro",
-      description: "O martelinho de ouro é uma técnica artesanal de funilaria que remove amassados de veículos sem danificar a pintura original. Utilizando ferramentas especiais e alavancas, profissionais moldam a lataria de dentro para fora, devolvendo a forma original com precisão. É ideal para pequenos/médios danos (granizo, batidas de porta), oferecendo reparo rápido, econômico e ecológico",
+      description: "Técnica artesanal de alta precisão que remove amassados de carros premium sem a necessidade de repintura, preservando a originalidade e o valor de revenda do veículo.",
       icon: <Hammer className="w-7 h-7" />,
-      imageSrc: "/service4.jpg"
+      imageSrc: "/assets/11.20.08.jpeg"
+    },
+    {
+      id: "polimento",
+      title: "Polimento Técnico e Vitrificação",
+      description: "Correção avançada de verniz para remoção de micro-riscos. Selamento da pintura com vitrificação cerâmica, garantindo hidrofobia, proteção UV e brilho espelhado prolongado.",
+      icon: <Sparkles className="w-7 h-7" />,
+      imageSrc: "/assets/b1.jpeg"
     }
   ]
 };
@@ -63,12 +65,15 @@ export default function Home() {
     <div className="min-h-screen bg-[#050505] text-white font-sans selection:bg-zinc-800 overflow-x-hidden">
       <Hero slides={heroSlides} />
       <main>
+        <TrustIndicators />
         <Services
           title={servicesData.title}
           subtitle={servicesData.subtitle}
           services={servicesData.items}
         />
+        <BeforeAfterShowcase />
         <ProcessSection />
+        <FAQSection />
         <ContactForm />
       </main>
     </div>

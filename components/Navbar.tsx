@@ -17,14 +17,17 @@ export default function Navbar() {
               <Link href="/" className="hover:text-[#ff4500] transition-colors text-sm font-medium">
                 Início
               </Link>
+              <Link href="/sobre-nos" className="hover:text-[#ff4500] transition-colors text-sm font-medium">
+                Sobre Nós
+              </Link>
               <Link href="/servicos" className="hover:text-[#ff4500] transition-colors text-sm font-medium">
                 Serviços
               </Link>
               <Link href="/projetos" className="hover:text-[#ff4500] transition-colors text-sm font-medium">
-                Projetos
+                Portfólio
               </Link>
               <Link href="/contato" className="hover:text-[#ff4500] transition-colors text-sm font-medium">
-                Contato
+                Agendar Avaliação
               </Link>
             </div>
             <a 

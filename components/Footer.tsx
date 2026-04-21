@@ -9,24 +9,24 @@ export default function Footer() {
           <Image src="/assets/logo.png" alt="Mavericks Collision Logo" width={180} height={50} className="object-contain opacity-50 grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-300" />
           <span>&copy; {new Date().getFullYear()} Mavericks. Todos os direitos reservados.</span>
         </div>
-        <div className="flex space-x-6 mt-4 md:mt-0 text-sm">
-          <Link href="/servicos" className="text-gray-400 hover:text-[#ff4500] transition-colors">
-            Serviços
+        <div className="flex flex-wrap justify-center md:justify-end gap-x-6 gap-y-2 mt-4 md:mt-0 text-sm">
+          <Link href="/servicos/funilaria-e-pintura" className="text-gray-400 hover:text-[#ff4500] transition-colors">
+            Funilaria e Pintura
           </Link>
-          <Link href="/projetos" className="text-gray-400 hover:text-[#ff4500] transition-colors">
-            Projetos
+          <Link href="/servicos/ppf" className="text-gray-400 hover:text-[#ff4500] transition-colors">
+            PPF
+          </Link>
+          <Link href="/servicos/vitrificacao-ceramica" className="text-gray-400 hover:text-[#ff4500] transition-colors">
+            Vitrificação
+          </Link>
+          <Link href="/servicos/martelinho-de-ouro" className="text-gray-400 hover:text-[#ff4500] transition-colors">
+            Martelinho de Ouro
           </Link>
           <Link href="/sobre-nos" className="text-gray-400 hover:text-[#ff4500] transition-colors">
             Sobre Nós
           </Link>
           <Link href="/contato" className="text-gray-400 hover:text-[#ff4500] transition-colors">
             Contato
-          </Link>
-          <Link href="/termos" className="text-gray-400 hover:text-[#ff4500] transition-colors">
-            Termos de Uso
-          </Link>
-          <Link href="/privacidade" className="text-gray-400 hover:text-[#ff4500] transition-colors">
-            Política de Privacidade
           </Link>
         </div>
       </div>
