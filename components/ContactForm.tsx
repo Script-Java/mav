@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { User, Mail, Car, MessageSquare, Send, CheckCircle } from "lucide-react";
+import { User, Mail, Car, MessageSquare, Send, CheckCircle, AlertCircle } from "lucide-react";
 import { SectionWrapper } from "./SectionWrapper";
 import { FadeIn } from "./FadeIn";
 import { motion, AnimatePresence } from "framer-motion";
@@ -10,22 +10,24 @@ import { sendContactEmail } from "@/app/actions";
 export default function ContactForm() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
+    setError(null);
+
     try {
       const formData = new FormData(e.currentTarget);
       const result = await sendContactEmail(formData);
-      
+
       if (result.success) {
         setIsSuccess(true);
       } else {
-        alert(result.error);
+        setError(result.error || "Ocorreu um erro ao enviar. Tente novamente.");
       }
-    } catch (error) {
-      alert("Ocorreu um erro ao enviar. Tente novamente.");
+    } catch {
+      setError("Ocorreu um erro ao enviar. Tente novamente mais tarde.");
     } finally {
       setIsSubmitting(false);
     }
@@ -57,12 +59,18 @@ export default function ContactForm() {
                   <div className="w-20 h-20 mb-6 rounded-full bg-[#ff4500]/20 flex items-center justify-center border border-[#ff4500]/50 shadow-[0_0_30px_rgba(255,69,0,0.3)] text-[#ff4500]">
                     <CheckCircle className="w-10 h-10" />
                   </div>
-                  <h3 className="text-2xl font-bold text-white mb-3">Mensagem Enviada!</h3>
+                  <h3 className="text-2xl font-bold text-white mb-3">
+                    Mensagem Enviada!
+                  </h3>
                   <p className="text-zinc-400 font-light max-w-md">
-                    Entraremos em contato em breve. Sua solicitação foi recebida com sucesso e nossa equipe enviará um orçamento detalhado.
+                    Entraremos em contato em breve. Sua solicitação foi recebida
+                    com sucesso e nossa equipe enviará um orçamento detalhado.
                   </p>
-                  <button 
-                    onClick={() => setIsSuccess(false)}
+                  <button
+                    onClick={() => {
+                      setIsSuccess(false);
+                      setError(null);
+                    }}
                     className="mt-8 px-6 py-3 bg-white/5 border border-white/10 rounded-full text-white text-sm font-medium hover:bg-white/10 transition-colors"
                   >
                     Enviar Nova Mensagem
@@ -77,9 +85,23 @@ export default function ContactForm() {
                   onSubmit={handleSubmit}
                   className="space-y-6"
                 >
+                  {error && (
+                    <motion.div
+                      initial={{ opacity: 0, y: -10 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      className="flex items-start gap-3 p-4 rounded-xl bg-red-500/10 border border-red-500/20 text-red-300 text-sm"
+                    >
+                      <AlertCircle className="w-5 h-5 flex-shrink-0 mt-0.5" />
+                      <span>{error}</span>
+                    </motion.div>
+                  )}
+
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div className="space-y-2 relative group">
-                      <label htmlFor="nome" className="block text-sm font-medium text-neutral-300 ml-1">
+                      <label
+                        htmlFor="nome"
+                        className="block text-sm font-medium text-neutral-300 ml-1"
+                      >
                         Nome Completo
                       </label>
                       <div className="relative">
@@ -98,7 +120,10 @@ export default function ContactForm() {
                     </div>
 
                     <div className="space-y-2 relative group">
-                      <label htmlFor="email" className="block text-sm font-medium text-neutral-300 ml-1">
+                      <label
+                        htmlFor="email"
+                        className="block text-sm font-medium text-neutral-300 ml-1"
+                      >
                         E-mail
                       </label>
                       <div className="relative">
@@ -118,7 +143,10 @@ export default function ContactForm() {
                   </div>
 
                   <div className="space-y-2 relative group">
-                    <label htmlFor="veiculo" className="block text-sm font-medium text-neutral-300 ml-1">
+                    <label
+                      htmlFor="veiculo"
+                      className="block text-sm font-medium text-neutral-300 ml-1"
+                    >
                       Modelo do Veículo
                     </label>
                     <div className="relative">
@@ -137,7 +165,10 @@ export default function ContactForm() {
                   </div>
 
                   <div className="space-y-2 relative group">
-                    <label htmlFor="descricao" className="block text-sm font-medium text-neutral-300 ml-1">
+                    <label
+                      htmlFor="descricao"
+                      className="block text-sm font-medium text-neutral-300 ml-1"
+                    >
                       Descrição do Serviço
                     </label>
                     <div className="relative">
@@ -163,7 +194,9 @@ export default function ContactForm() {
                     className="w-full flex items-center justify-center gap-2 bg-[#ff4500] hover:bg-[#e03e00] text-white font-semibold rounded-xl px-6 py-4 transition-colors disabled:opacity-50 mt-4"
                   >
                     <span className="flex items-center">
-                      {isSubmitting ? "Enviando..." : "Solicitar Orçamento Automotivo"}
+                      {isSubmitting
+                        ? "Enviando..."
+                        : "Solicitar Orçamento Automotivo"}
                       {!isSubmitting && <Send className="w-5 h-5 ml-2" />}
                     </span>
                   </motion.button>

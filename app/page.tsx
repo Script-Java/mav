@@ -2,7 +2,8 @@ import Hero from "@/components/Hero";
 import Services from "@/components/Services";
 import ProcessSection from "@/components/ProcessSection";
 import ContactForm from "@/components/ContactForm";
-import { Wrench, Paintbrush, Sparkles, Hammer, Shield } from "lucide-react";
+import FAQSection from "@/components/FAQSection";
+import { Paintbrush, Sparkles, Hammer, Shield } from "lucide-react";
 
 // Data passed as props representing potential CMS data
 const heroSlides = [
@@ -69,6 +70,7 @@ export default function Home() {
           services={servicesData.items}
         />
         <ProcessSection />
+        <FAQSection />
         <ContactForm />
       </main>
     </div>
