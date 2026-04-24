@@ -65,14 +65,14 @@ export default function ServicesGrid({ services }: ServicesGridProps) {
               </p>
 
               {/* Bottom CTA line */}
-              <div className="mt-5 pt-4 border-t border-white/[0.06] flex items-center justify-between">
-                <span className="text-xs text-zinc-500 uppercase tracking-widest">Saiba mais</span>
+              <a href={`/servicos/${service.id}`} className="mt-5 pt-4 border-t border-white/[0.06] flex items-center justify-between group-hover:border-[#ff4500]/20 cursor-pointer">
+                <span className="text-xs text-zinc-500 uppercase tracking-widest group-hover:text-zinc-300 transition-colors">Saiba mais</span>
                 <div className="w-6 h-6 rounded-full border border-white/10 flex items-center justify-center group-hover:border-[#ff4500]/50 group-hover:bg-[#ff4500]/10 transition-all duration-300">
                   <svg className="w-3 h-3 text-zinc-400 group-hover:text-[#ff4500] transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                   </svg>
                 </div>
-              </div>
+              </a>
             </div>
           </div>
         </ServiceCardReveal>

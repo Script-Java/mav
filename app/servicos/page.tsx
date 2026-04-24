@@ -18,12 +18,12 @@ export const metadata = {
 
 const services = [
   {
-    id: "martelinho",
+    id: "martelinho-de-ouro",
     title: "Martelinho de Ouro",
     description:
       "Remoção de amassados e mossas com PDR (Paintless Dent Repair) — sem pintura, sem perda de valor. Técnica milimétrica que preserva 100% o verniz original de fábrica.",
     icon: <Hammer className="w-5 h-5" />,
-    imageSrc: "/images/martelinho-detail.jpeg",
+    imageSrc: "/assets/11.20.08.jpeg",
     imageAlt: "Técnico realizando martelinho de ouro em painel de veículo",
     priority: true,
     badge: "PDR",
@@ -34,48 +34,57 @@ const services = [
     description:
       "Paint Protection Film de última geração. Blindagem invisível contra pedriscos, riscos e agentes químicos. Auto-reparação térmica integrada para proteção definitiva.",
     icon: <ShieldCheck className="w-5 h-5" />,
-    imageSrc: "/images/martelinho-detail.jpg",
+    imageSrc: "/assets/11.21.39.jpeg",
     imageAlt: "Aplicação de PPF Paint Protection Film em capô de veículo",
     priority: true,
     badge: "Proteção Total",
   },
   {
-    id: "vitrificacao",
+    id: "vitrificacao-ceramica",
     title: "Vitrificação Cerâmica",
     description:
       "Nano-revestimento cerâmico SiO₂ de alta concentração: hidrofobicidade extrema, brilho profundo e proteção UV de longa duração. Superfície virtualmente inatingível.",
     icon: <Sparkles className="w-5 h-5" />,
-    imageSrc: "/images/vitrificacao-ceramic.jpg",
+    imageSrc: "/assets/b2.jpeg",
     imageAlt: "Efeito de hidrofobicidade em pintura vitrificada com cerâmica",
   },
   {
-    id: "detalhamento",
-    title: "Detalhamento Profissional",
+    id: "estetica-automotiva",
+    title: "Estética Automotiva de Luxo",
     description:
       "Restauração completa interior e exterior com higienização profunda, renovação de plásticos, polimento de faróis e hidratação de couro. O veículo de volta ao showroom.",
     icon: <Microscope className="w-5 h-5" />,
-    imageSrc: "/images/detalhamento-detail.jpg",
+    imageSrc: "/assets/11.23.21.jpeg",
     imageAlt: "Processo de detalhamento automotivo interior",
   },
   {
-    id: "funilaria",
+    id: "funilaria-e-pintura",
     title: "Funilaria de Precisão",
     description:
       "Reparos estruturais com alinhamento tridimensional por escaneamento a laser. Geometria do veículo 100% restaurada com peças originais e soldagem certificada.",
     icon: <Wrench className="w-5 h-5" />,
-    imageSrc: "/images/funilaria-bodywork.jpg",
+    imageSrc: "/assets/a2.jpeg",
     imageAlt: "Funilaria de precisão com alinhamento estrutural em oficina",
   },
   {
-    id: "pintura",
-    title: "Pintura",
+    id: "pintura-automotiva-premium",
+    title: "Pintura Automotiva Premium",
     description:
       "Mistura computadorizada de tintas importadas com câmara de cura UV para fidelidade total à cor original. Acabamento de concessionária com garantia de brilho estendida.",
     icon: <Paintbrush2 className="w-5 h-5" />,
-    imageSrc: "/images/pintura-paint.jpg",
+    imageSrc: "/assets/11.16.52.jpeg",
     imageAlt: "Aplicação de pintura automotiva em cabine de pintura profissional",
     badge: "Especializado",
   },
+  {
+    id: "polimento-tecnico",
+    title: "Polimento Técnico",
+    description:
+      "Correção avançada de pintura que remove hologramas, micro-riscos e marcas do tempo, nivelando o verniz para um brilho espelhado impecável e duradouro.",
+    icon: <Sparkles className="w-5 h-5" />,
+    imageSrc: "/assets/b1.jpeg",
+    imageAlt: "Polimento técnico em carro esportivo",
+  }
 ];
 
 export default function ServicosPage() {

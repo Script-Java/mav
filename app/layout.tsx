@@ -8,6 +8,7 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
+<<<<<<< HEAD
   title: "Mavericks Collision | Estética Automotiva Premium em Curitiba",
   description:
     "Especialistas em funilaria de precisão, pintura, PPF, vitrificação cerâmica, polimento técnico e martelinho de ouro em Curitiba. Tecnologia de ponta para veículos de luxo e alto padrão.",
@@ -66,6 +67,28 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: "/",
+=======
+  title: 'Mavericks Collision | Oficina Premium de Funilaria e Estética Automotiva em Curitiba',
+  description: 'Especialistas em funilaria e pintura premium, estética automotiva, PPF e martelinho de ouro em Curitiba. Atendimento de alto padrão para clientes exigentes.',
+  keywords: ['funilaria e pintura Curitiba', 'estética automotiva Curitiba', 'PPF Curitiba preço', 'martelinho de ouro Curitiba', 'pintura automotiva Curitiba', 'oficina premium', 'vitrificação cerâmica Curitiba'],
+  authors: [{ name: 'Mavericks Collision' }],
+  robots: { index: true, follow: true },
+  openGraph: {
+    title: 'Mavericks Collision | Oficina Premium em Curitiba',
+    description: 'Especialistas em funilaria e pintura premium, estética automotiva, PPF e martelinho de ouro. Excelência e tecnologia para o seu veículo em Curitiba.',
+    url: 'https://mavscollision.com.br',
+    siteName: 'Mavericks Collision',
+    images: [
+      {
+        url: '/assets/logo.png',
+        width: 800,
+        height: 600,
+        alt: 'Mavericks Collision Logo',
+      },
+    ],
+    locale: 'pt_BR',
+    type: 'website',
+>>>>>>> 8e3c46ace69fe9712f3b538282ea05b66c6f3097
   },
 };
 

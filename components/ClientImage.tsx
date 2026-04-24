@@ -9,7 +9,8 @@ export default function SafeImage(props: ImageProps) {
   return (
     <Image
       {...props}
-      src={error ? '/fallback-car.jpg' : props.src}
+      alt={props.alt || "Mavericks Collision image"}
+      src={error ? '/assets/fallback-car.jpg' : props.src}
       onError={() => setError(true)}
       className={`${props.className} transition-opacity duration-500 ${error ? 'opacity-50' : 'opacity-100'}`}
     />
