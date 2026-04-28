@@ -1,4 +1,4 @@
-import SafeImage from "@/components/ClientImage";
+import { ZoomableImage } from "@/components/ZoomableImage";
 import { FadeIn } from "@/components/FadeIn";
 import { SectionWrapper } from "@/components/SectionWrapper";
 
@@ -12,15 +12,15 @@ const projetos = [
     id: "proj-1",
     titulo: "Restauração Profunda & Vitrificação",
     descricao: "O mais alto rigor da estética automotiva. Correção intensiva do verniz acompanhada de polimento em múltiplas etapas e vitrificação para selar o acabamento, atestando o padrão da Mavericks Collision em proteção e brilho.",
-    imgAntes: "/assets/b1.jpeg",
-    imgDepois: "/assets/a1.jpeg"
+    imgAntes: "/assets/b1.png",
+    imgDepois: "/assets/a1.png"
   },
   {
     id: "proj-2",
     titulo: "Pintura Mavericks",
     descricao: "Repintura executada sob rigoroso controle de qualidade e assepsia. Utilização do sistema de cura otimizado e tintas de alto padrão para entregar não apenas a tonalidade original de fábrica, mas um nivelamento e brilho absolutamente perfeitos.",
-    imgAntes: "/assets/b2.jpeg",
-    imgDepois: "/assets/a2.jpeg"
+    imgAntes: "/assets/b2.png",
+    imgDepois: "/assets/a2.png"
   }
 ];
 
@@ -42,32 +42,27 @@ export default function ProjetosPage() {
         <div className="space-y-24">
           {projetos.map((projeto, index) => (
             <FadeIn key={projeto.id} delay={0.2 + (index * 0.1)}>
-              <div className="flex flex-col lg:flex-row gap-10 items-center">
-                <div className="w-full lg:w-1/3">
-                  <h3 className="text-3xl font-bold text-white mb-4">{projeto.titulo}</h3>
-                  <p className="text-zinc-400">{projeto.descricao}</p>
-                </div>
-                
-                <div className="w-full lg:w-2/3 grid grid-cols-2 gap-4">
-                  <div className="relative aspect-video rounded-2xl overflow-hidden border border-white/10">
-                    <div className="absolute top-4 left-4 z-10 px-3 py-1 bg-black/60 backdrop-blur-md rounded-full border border-white/10 text-xs font-semibold text-white tracking-wider uppercase">Antes</div>
-                    <SafeImage 
-                      src={projeto.imgAntes} 
-                      alt={`${projeto.titulo} Antes`} 
-                      fill 
+              <div className="w-full">
+                <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-4 lg:gap-8">
+                  <div className="relative aspect-video rounded-2xl overflow-hidden border border-white/10 group">
+                    <div className="absolute top-4 left-4 z-10 px-3 py-1 bg-black/60 backdrop-blur-md rounded-full border border-white/10 text-xs font-semibold text-white tracking-wider uppercase pointer-events-none">Antes</div>
+                    <ZoomableImage
+                      src={projeto.imgAntes}
+                      alt={`${projeto.titulo} Antes`}
+                      fill
                       sizes="(max-width: 768px) 100vw, 50vw"
-                      className="object-cover"
+                      className="object-cover transition-transform duration-700 group-hover:scale-105"
                     />
                   </div>
-                  
-                  <div className="relative aspect-video rounded-2xl overflow-hidden border border-white/10">
-                    <div className="absolute top-4 right-4 z-10 px-3 py-1 bg-[#ff4500]/80 backdrop-blur-md rounded-full border border-white/10 text-xs font-semibold text-white tracking-wider uppercase">Depois</div>
-                    <SafeImage 
-                      src={projeto.imgDepois} 
-                      alt={`${projeto.titulo} Depois`} 
-                      fill 
+
+                  <div className="relative aspect-video rounded-2xl overflow-hidden border border-white/10 group">
+                    <div className="absolute top-4 right-4 z-10 px-3 py-1 bg-[#ff4500]/80 backdrop-blur-md rounded-full border border-white/10 text-xs font-semibold text-white tracking-wider uppercase pointer-events-none">Depois</div>
+                    <ZoomableImage
+                      src={projeto.imgDepois}
+                      alt={`${projeto.titulo} Depois`}
+                      fill
                       sizes="(max-width: 768px) 100vw, 50vw"
-                      className="object-cover"
+                      className="object-cover transition-transform duration-700 group-hover:scale-105"
                     />
                   </div>
                 </div>

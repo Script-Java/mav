@@ -6,7 +6,7 @@ export default function Footer() {
     <footer className="mt-auto glass-panel border border-b-0 border-r-0 border-l-0 rounded-t-xl mx-4 sm:mx-6 lg:mx-8 mb-4">
       <div className="max-w-7xl mx-auto py-8 px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center">
         <div className="text-sm text-gray-400 flex flex-col items-start gap-4">
-          <Image src="/assets/logo.png" alt="Mavericks Collision Logo" width={180} height={50} className="object-contain opacity-50 grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-300" />
+          <Image src="/assets/logo.png" alt="Mavericks Collision Logo" width={180} height={50} className="object-contain" />
           <span>&copy; {new Date().getFullYear()} Mavericks. Todos os direitos reservados.</span>
         </div>
         <div className="flex flex-wrap justify-center md:justify-end gap-x-6 gap-y-2 mt-4 md:mt-0 text-sm">

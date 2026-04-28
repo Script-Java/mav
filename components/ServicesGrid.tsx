@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { ServiceCardReveal } from "./FramerReveal";
 import { ReactNode } from "react";
 
@@ -7,9 +6,6 @@ interface Service {
   title: string;
   description: string;
   icon: ReactNode;
-  imageSrc: string;
-  imageAlt: string;
-  priority?: boolean;
   badge?: string;
 }
 
@@ -24,40 +20,32 @@ export default function ServicesGrid({ services }: ServicesGridProps) {
         <ServiceCardReveal key={service.id} delay={index * 0.08}>
           <div className="group relative flex flex-col h-full overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02] backdrop-blur-xl hover:border-white/20 hover:bg-white/[0.04] transition-all duration-500 cursor-default">
             
-            {/* Image Section */}
-            <div className="relative h-52 w-full overflow-hidden flex-shrink-0">
-              <Image
-                src={service.imageSrc}
-                alt={service.imageAlt}
-                fill
-                priority={service.priority}
-                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
-              />
-              {/* Glass overlay over image */}
-              <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-[#050505]/40 to-transparent" />
-              
-              {/* Badge */}
-              {service.badge && (
-                <div className="absolute top-4 left-4 px-3 py-1 rounded-full bg-[#ff4500]/80 backdrop-blur-md border border-[#ff4500]/30 text-white text-xs font-semibold tracking-widest uppercase">
-                  {service.badge}
-                </div>
-              )}
-            </div>
-
             {/* Content Section */}
             <div className="flex flex-col flex-grow p-6 pt-5">
               {/* Icon + Title Row */}
-              <div className="flex items-start gap-4 mb-4">
-                <div className="flex-shrink-0 p-3 rounded-xl bg-white/5 border border-white/10 text-[#ff4500] group-hover:bg-[#ff4500]/10 group-hover:border-[#ff4500]/20 transition-all duration-300">
-                  {service.icon}
+              <div className="flex items-start justify-between gap-4 mb-4">
+                <div className="flex items-start gap-4">
+                  <div className="flex-shrink-0 p-3 rounded-xl bg-white/5 border border-white/10 text-[#ff4500] group-hover:bg-[#ff4500]/10 group-hover:border-[#ff4500]/20 transition-all duration-300">
+                    {service.icon}
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold text-white tracking-tight leading-tight">
+                      {service.title}
+                    </h3>
+                  </div>
                 </div>
-                <div>
-                  <h3 className="text-xl font-bold text-white tracking-tight leading-tight">
-                    {service.title}
-                  </h3>
-                </div>
+                {service.badge && (
+                  <div className="hidden sm:block px-3 py-1 rounded-full bg-[#ff4500]/10 border border-[#ff4500]/30 text-[#ff4500] text-[10px] sm:text-xs font-semibold tracking-widest uppercase whitespace-nowrap">
+                    {service.badge}
+                  </div>
+                )}
               </div>
+              {/* Mobile Badge */}
+              {service.badge && (
+                <div className="sm:hidden mb-4 inline-flex px-3 py-1 rounded-full bg-[#ff4500]/10 border border-[#ff4500]/30 text-[#ff4500] text-[10px] font-semibold tracking-widest uppercase whitespace-nowrap self-start">
+                  {service.badge}
+                </div>
+              )}
 
               {/* Description */}
               <p className="text-sm text-zinc-400 leading-relaxed flex-grow">

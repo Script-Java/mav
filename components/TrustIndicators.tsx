@@ -30,13 +30,13 @@ export default function TrustIndicators() {
     <SectionWrapper id="trust" className="py-16 bg-[#0a0a0a] border-y border-white/5">
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
         {indicators.map((item, index) => (
-          <FadeIn key={index} delay={0.1 * index}>
-            <div className="flex flex-col items-center text-center p-6 rounded-2xl bg-white/[0.02] border border-white/5 hover:bg-white/[0.04] transition-colors">
+          <FadeIn key={index} delay={0.1 * index} className="h-full">
+            <div className="flex flex-col items-center text-center p-6 rounded-2xl bg-white/[0.02] border border-white/5 hover:bg-white/[0.04] transition-colors h-full">
               <div className="mb-4 p-3 rounded-full bg-white/5">
                 {item.icon}
               </div>
               <h3 className="text-lg font-semibold text-white mb-2">{item.title}</h3>
-              <p className="text-zinc-400 text-sm leading-relaxed">{item.description}</p>
+              <p className="text-zinc-400 text-sm leading-relaxed flex-grow">{item.description}</p>
             </div>
           </FadeIn>
         ))}
