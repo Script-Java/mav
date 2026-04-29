@@ -5,7 +5,6 @@ import { User, Mail, Car, MessageSquare, Send, CheckCircle, AlertCircle } from "
 import { SectionWrapper } from "./SectionWrapper";
 import { FadeIn } from "./FadeIn";
 import { motion, AnimatePresence } from "framer-motion";
-import { sendContactEmail } from "@/app/actions";
 
 export default function ContactForm() {
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -19,12 +18,25 @@ export default function ContactForm() {
 
     try {
       const formData = new FormData(e.currentTarget);
-      const result = await sendContactEmail(formData);
+      const data = {
+        nome: formData.get("nome"),
+        email: formData.get("email"),
+        veiculo: formData.get("veiculo"),
+        descricao: formData.get("descricao"),
+      };
+
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+      });
+
+      const result = await response.json();
 
       if (result.success) {
         setIsSuccess(true);
       } else {
-        setError(result.error || "Ocorreu um erro ao enviar. Tente novamente.");
+        setError(result.message || "Ocorreu um erro ao enviar. Tente novamente.");
       }
     } catch {
       setError("Ocorreu um erro ao enviar. Tente novamente mais tarde.");
