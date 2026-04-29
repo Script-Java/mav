@@ -13,7 +13,7 @@ const differentiators = [
     icon: <Zap className="w-6 h-6" />,
     title: "Estrutura de Alta Performance",
     description:
-      "Trabalhamos com o que há de mais avançado no mercado global de reparação automotiva. Contamos com ferramentas importadas em aço cirúrgico e espectrofotômetros de altíssima precisão para um acerto de cor absolutamente perfeito.",
+      "Trabalhamos com o que há de mais avançado no mercado global de reparação automotiva. Contamos com ferramentas importadas e espectrofotômetros de altíssima precisão para um acerto de cor absolutamente perfeito.",
   },
   {
     icon: <Users className="w-6 h-6" />,
@@ -83,7 +83,7 @@ export default function DiferenciaisPage() {
 
         <FadeIn delay={0.4}>
           <div className="mt-24 text-center">
-            <p className="text-sm md:text-base font-medium text-zinc-500 uppercase tracking-[0.3em] opacity-80">
+            <p className="text-sm md:text-base text-white font-bold uppercase tracking-[0.3em]">
               Qualidade. Idoneidade. Transparência.
             </p>
           </div>
