@@ -1,13 +1,9 @@
 import { FadeIn } from "@/components/FadeIn";
 import { SectionWrapper } from "@/components/SectionWrapper";
 import { FramerReveal } from "@/components/FramerReveal";
-import { ServiceCardReveal } from "@/components/FramerReveal";
 import Link from "next/link";
 import Image from "next/image";
 import {
-  Zap,
-  Users,
-  MessageCircle,
   ArrowRight,
   MapPin,
   Target,
@@ -22,26 +18,7 @@ export const metadata = {
     "Conheça a história, o manifesto e o compromisso da Mavericks Collision com a excelência em estética automotiva premium em Curitiba.",
 };
 
-const differentiators = [
-  {
-    icon: <Zap className="w-6 h-6" />,
-    title: "Equipamentos de Última Geração",
-    description:
-      "Cabines de pintura pressurizadas, espectrofotômetros para acerto de cor e ferramentas PDR em aço cirúrgico.",
-  },
-  {
-    icon: <Users className="w-6 h-6" />,
-    title: "Técnicos Especializados",
-    description:
-      "Nossa equipe passa por treinamentos constantes e possui certificação internacional em aplicação de PPF e Vitrificação.",
-  },
-  {
-    icon: <MessageCircle className="w-6 h-6" />,
-    title: "Atendimento Consultivo",
-    description:
-      "Não empurramos serviços. Avaliamos a real necessidade do seu carro e criamos um projeto sob medida para ele.",
-  },
-];
+
 
 export default function SobreNosPage() {
   return (
@@ -80,7 +57,7 @@ export default function SobreNosPage() {
               <div className="absolute -inset-4 bg-gradient-to-br from-[#ff4500]/20 to-transparent rounded-3xl blur-2xl opacity-40" />
               <div className="relative rounded-3xl overflow-hidden border border-white/10 bg-white/5 aspect-[4/3]">
                 <Image
-                  src="/assets/b1.jpeg"
+                  src="/about/1.png"
                   alt="Instalações premium da Mavericks Collision"
                   fill
                   className="object-cover"
@@ -136,7 +113,7 @@ export default function SobreNosPage() {
             <div className="text-center mb-12">
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 text-zinc-300 text-sm font-medium mb-6">
                 <ShieldCheck className="w-4 h-4 text-[#ff4500]" />
-                O Manifesto Mavericks
+                Porque escolher a Mavericks
               </div>
             </div>
           </FadeIn>
@@ -169,38 +146,7 @@ export default function SobreNosPage() {
         </div>
       </section>
 
-      {/* Differentiators Section */}
-      <SectionWrapper className="py-16">
-        <FadeIn>
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-white tracking-tighter mb-5">
-              Nossos Diferenciais
-            </h2>
-            <p className="text-lg text-zinc-400 font-light max-w-2xl mx-auto">
-              Tecnologia, expertise e uma abordagem consultiva que coloca o seu
-              veículo no centro de cada decisão.
-            </p>
-          </div>
-        </FadeIn>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {differentiators.map((item, index) => (
-            <ServiceCardReveal key={index} delay={index * 0.1}>
-              <div className="h-full p-8 rounded-3xl border border-white/10 bg-white/[0.03] backdrop-blur-sm hover:border-[#ff4500]/30 hover:bg-white/[0.05] transition-all duration-500 group">
-                <div className="w-14 h-14 rounded-2xl bg-[#ff4500]/10 border border-[#ff4500]/20 flex items-center justify-center text-[#ff4500] mb-6 group-hover:scale-110 transition-transform duration-300">
-                  {item.icon}
-                </div>
-                <h3 className="text-xl font-bold text-white mb-3">
-                  {item.title}
-                </h3>
-                <p className="text-zinc-400 font-light leading-relaxed">
-                  {item.description}
-                </p>
-              </div>
-            </ServiceCardReveal>
-          ))}
-        </div>
-      </SectionWrapper>
 
       {/* Stats / Trust strip */}
       <section className="w-full py-16 px-6 border-y border-white/5">

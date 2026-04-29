@@ -28,7 +28,7 @@ export default function EsteticaAutomotivaPage() {
         <FadeIn delay={0.2}>
           <div className="relative aspect-[21/9] w-full rounded-3xl overflow-hidden mb-16 border border-white/10">
             <SafeImage
-              src="/assets/11.23.21.jpeg"
+              src="/services/1.png"
               alt="Processo detalhado de limpeza de interior e painel"
               fill
               className="object-cover"

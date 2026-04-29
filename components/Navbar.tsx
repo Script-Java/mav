@@ -7,20 +7,19 @@ import { MapPin, Menu, X } from "lucide-react";
 
 const navLinks = [
   { href: "/", label: "Início" },
-  { 
-    href: "/servicos", 
+  {
+    href: "/servicos",
     label: "Serviços",
     subLinks: [
       { href: "/servicos/estetica-automotiva", label: "Estética Automotiva" },
-      { href: "/servicos/funilaria-e-pintura", label: "Funilaria e Pintura" },
+      { href: "/servicos/funilaria-e-pintura", label: "Funilaria e Pintura Premium" },
       { href: "/servicos/martelinho-de-ouro", label: "Martelinho de Ouro" },
-      { href: "/servicos/pintura-automotiva-premium", label: "Pintura Automotiva Premium" },
       { href: "/servicos/polimento-tecnico", label: "Polimento Técnico" },
       { href: "/servicos/ppf", label: "PPF" },
       { href: "/servicos/vitrificacao-ceramica", label: "Vitrificação Cerâmica" },
     ]
   },
-  { href: "/projetos", label: "Projetos" },
+  { href: "/nossos-diferenciais", label: "Nossos Diferenciais" },
   { href: "/sobre-nos", label: "Sobre Nós" },
   { href: "/contato", label: "Contato" },
 ];
@@ -49,9 +48,8 @@ export default function Navbar() {
   return (
     <>
       <nav
-        className={`sticky top-0 z-50 w-full glass-panel border-b border-t-0 border-l-0 border-r-0 transition-all duration-300 ${
-          scrolled ? "bg-black/60" : ""
-        }`}
+        className={`sticky top-0 z-50 w-full glass-panel border-b border-t-0 border-l-0 border-r-0 transition-all duration-300 ${scrolled ? "bg-black/60" : ""
+          }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
@@ -132,17 +130,15 @@ export default function Navbar() {
 
       {/* Mobile overlay */}
       <div
-        className={`fixed inset-0 z-40 bg-black/80 backdrop-blur-md transition-opacity duration-300 md:hidden ${
-          isOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
-        }`}
+        className={`fixed inset-0 z-40 bg-black/80 backdrop-blur-md transition-opacity duration-300 md:hidden ${isOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
+          }`}
         onClick={() => setIsOpen(false)}
       />
 
       {/* Mobile menu drawer */}
       <div
-        className={`fixed top-0 right-0 z-40 h-full w-[280px] bg-[#0a0a0a] border-l border-white/10 transform transition-transform duration-300 ease-out md:hidden ${
-          isOpen ? "translate-x-0" : "translate-x-full"
-        }`}
+        className={`fixed top-0 right-0 z-40 h-full w-[280px] bg-[#0a0a0a] border-l border-white/10 transform transition-transform duration-300 ease-out md:hidden ${isOpen ? "translate-x-0" : "translate-x-full"
+          }`}
       >
         <div className="flex flex-col pt-20 px-6 gap-2 h-full overflow-y-auto pb-8">
           {navLinks.map((link) => (

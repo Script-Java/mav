@@ -28,7 +28,7 @@ export default function MartelinhoPage() {
         <FadeIn delay={0.2}>
           <div className="relative aspect-[21/9] w-full rounded-3xl overflow-hidden mb-16 border border-white/10">
             <SafeImage
-              src="/assets/11.20.08.jpeg"
+              src="/services/3.png"
               alt="Técnico realizando serviço de martelinho de ouro"
               fill
               className="object-cover"

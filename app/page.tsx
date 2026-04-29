@@ -4,7 +4,7 @@ import ProcessSection from "@/components/ProcessSection";
 import ContactForm from "@/components/ContactForm";
 import FAQSection from "@/components/FAQSection";
 import TrustIndicators from "@/components/TrustIndicators";
-import { Paintbrush, Sparkles, Hammer, Shield } from "lucide-react";
+import { Paintbrush, Sparkles, Hammer, Shield, Droplets, Microscope } from "lucide-react";
 
 const heroSlides = [
   {
@@ -55,6 +55,20 @@ const servicesData = {
       description: "O martelinho de ouro é uma técnica artesanal de funilaria que remove amassados de veículos sem danificar a pintura original. Utilizando ferramentas especiais e alavancas, profissionais moldam a lataria de dentro para fora, devolvendo a forma original com precisão. É ideal para pequenos/médios danos (granizo, batidas de porta), oferecendo reparo rápido, econômico e ecológico",
       icon: <Hammer className="w-7 h-7" />,
       imageSrc: "/service4.png"
+    },
+    {
+      id: "detalhamento",
+      title: "Estética Automotiva",
+      description: "Serviço completo de estética automotiva de luxo. Realizamos higienização profunda do interior, tratamento de couro e renovação de plásticos. O detalhamento (detail) vai além de uma simples lavagem, focando na restauração minuciosa de cada componente do seu veículo para devolver o aspecto original de showroom.",
+      icon: <Microscope className="w-7 h-7" />,
+      imageSrc: "/images/detail.png"
+    },
+    {
+      id: "vitrificacao",
+      title: "Vitrificação Cerâmica",
+      description: "Proteção avançada de longa duração utilizando nano-revestimento cerâmico. O ceramic coat cria uma camada vitrificada invisível e extremamente rígida que protege a pintura contra contaminações, raios UV e micro-riscos, além de proporcionar repelência extrema à água e intensificar profundamente o brilho da cor.",
+      icon: <Droplets className="w-7 h-7" />,
+      imageSrc: "/images/ceramic.png"
     }
   ]
 };

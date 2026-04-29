@@ -28,7 +28,7 @@ export default function PinturaAutomotivaPage() {
         <FadeIn delay={0.2}>
           <div className="relative aspect-[21/9] w-full rounded-3xl overflow-hidden mb-16 border border-white/10">
             <SafeImage
-              src="/assets/11.16.52.jpeg"
+              src="/services/4.png"
               alt="Processo de pintura automotiva premium na cabine"
               fill
               className="object-cover"

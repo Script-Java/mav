@@ -28,7 +28,7 @@ export default function PolimentoTecnicoPage() {
         <FadeIn delay={0.2}>
           <div className="relative aspect-[21/9] w-full rounded-3xl overflow-hidden mb-16 border border-white/10">
             <SafeImage
-              src="/assets/b1.jpeg"
+              src="/services/4.png"
               alt="Polimento técnico automotivo"
               fill
               className="object-cover"

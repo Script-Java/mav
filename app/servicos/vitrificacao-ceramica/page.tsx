@@ -28,7 +28,7 @@ export default function VitrificacaoPage() {
         <FadeIn delay={0.2}>
           <div className="relative aspect-[21/9] w-full rounded-3xl overflow-hidden mb-16 border border-white/10">
             <SafeImage
-              src="/assets/b2.jpeg"
+              src="/services/6.png"
               alt="Efeito de repelência de água após vitrificação cerâmica"
               fill
               className="object-cover"

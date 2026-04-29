@@ -25,7 +25,7 @@ export default function ServiceCard({ title, description, icon, imageSrc }: Serv
 
       <div className="relative z-10 flex flex-col h-full">
         {imageSrc && (
-          <div className="relative w-full h-64 mb-6 rounded-2xl overflow-hidden align-top border border-white/10 shrink-0">
+          <div className="relative w-full h-64 mb-6 rounded-2xl overflow-hidden border border-white/10 shrink-0">
             <SafeImage
               src={imageSrc}
               alt={title}

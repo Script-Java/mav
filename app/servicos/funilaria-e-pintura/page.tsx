@@ -29,7 +29,7 @@ export default function FunilariaPinturaPage() {
         <FadeIn delay={0.2}>
           <div className="relative aspect-[21/9] w-full rounded-3xl overflow-hidden mb-16 border border-white/10">
             <SafeImage
-              src="/images/spray.png"
+              src="/services/2.png"
               alt="Processo de Funilaria e Pintura Premium"
               fill
               className="object-cover"

@@ -33,7 +33,7 @@ export default function Footer() {
             
             <div className="flex flex-wrap justify-center lg:justify-end gap-x-6 gap-y-2 text-xs text-zinc-500">
               <Link href="/" className="hover:text-[#ff4500] transition-colors">Início</Link>
-              <Link href="/projetos" className="hover:text-[#ff4500] transition-colors">Projetos</Link>
+              <Link href="/nossos-diferenciais" className="hover:text-[#ff4500] transition-colors">Nossos Diferenciais</Link>
               <Link href="/sobre-nos" className="hover:text-[#ff4500] transition-colors">Sobre Nós</Link>
               <Link href="/contato" className="hover:text-[#ff4500] transition-colors">Contato</Link>
             </div>
