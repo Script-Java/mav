@@ -134,7 +134,7 @@ export default function SobreNosPage() {
                 <p className="text-lg md:text-xl text-zinc-400 font-light leading-relaxed max-w-3xl">
                   Mantemos o compromisso inegociável de empregar apenas os
                   melhores materiais do mundo, tintas importadas (como AkzoNobel
-                  Sikkens) e maquinário de última geração. A nossa promessa é
+                  Sikkens) e maquinário de última geração. Utilizamos cabine de pintura Usi Itália, referência mundial em tecnologia automotiva — a mesma utilizada por equipes de Fórmula 1 para pintura de alta performance. E também Pistolas de pintura Sata possuem tecnologia alemã de ponta e são referência mundial no ramo de pistolas de pintura e pulverização para pintura automotiva. A nossa promessa é
                   simples, porém audaciosa: entregar o seu veículo
                   reestruturado, protegido e com um acabamento ainda mais
                   brilhante e imponente do que quando saiu da própria
