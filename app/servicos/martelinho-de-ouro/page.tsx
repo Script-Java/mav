@@ -6,7 +6,7 @@ import { CheckCircle2 } from "lucide-react";
 
 export const metadata = {
   title: "Martelinho de Ouro em Curitiba | Mavericks Collision",
-  description: "Especialistas em Martelinho de Ouro (PDR) em Curitiba. Remoção de amassados preservando 100% da pintura original. Serviço rápido e técnica cirúrgica para carros premium.",
+  description: "Especialistas em Martelinho de Ouro em Curitiba. Remoção de amassados preservando 100% da pintura original. Serviço rápido e técnica cirúrgica para carros premium.",
   keywords: ["martelinho de ouro Curitiba", "PDR Curitiba", "remoção de amassados", "estética automotiva Curitiba"],
 };
 
@@ -42,7 +42,7 @@ export default function MartelinhoPage() {
             <h2 className="text-3xl font-bold text-white mb-6">Preservação Impecável</h2>
             <div className="prose prose-invert prose-lg text-zinc-400 font-light">
               <p>
-                O Martelinho de Ouro, ou PDR (Paintless Dent Repair), não é apenas uma técnica; é um trabalho de altíssima precisão e paciência.
+                O Martelinho de Ouro, não é apenas uma técnica; é um trabalho de altíssima precisão e paciência.
               </p>
               <p>
                 Utilizando ferramentas especializadas em aço cirúrgico, nossos técnicos acessam a parte interna da lataria e, através de micropressões calculadas, massageiam o metal até que ele retorne à sua memória estrutural original.

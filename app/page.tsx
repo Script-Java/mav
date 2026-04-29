@@ -40,21 +40,21 @@ const servicesData = {
       title: "Pintura",
       description: "Nosso serviço de pintura automotiva restaura a originalidade e o brilho de fábrica do seu veículo com técnicas de ponta. Inclui preparação minuciosa, uso de tintas de alta qualidade, aplicação de verniz (clear coat) de alta resistência, cura em cabine e polimento final. Garantimos acabamento impecável, durabilidade e cor uniforme",
       icon: <Paintbrush className="w-7 h-7" />,
-      imageSrc: "/service2.jpg"
+      imageSrc: "/service2.png"
     },
     {
       id: "polimento",
       title: "Polimento Técnico",
       description: "A correção de pintura é um polimento técnico de alto nível que remove riscos, hologramas e imperfeições do verniz, devolvendo o brilho espelhado e a cor original do veículo. Utilizando compostos técnicos e iluminação especial, o serviço restaura a pintura, eliminando defeitos superficiais e preparando-a para proteção duradoura, como vitrificação.",
       icon: <Sparkles className="w-7 h-7" />,
-      imageSrc: "/service3.jpg"
+      imageSrc: "/service3.png"
     },
     {
       id: "martelinho",
       title: "Martelinho de Ouro",
       description: "O martelinho de ouro é uma técnica artesanal de funilaria que remove amassados de veículos sem danificar a pintura original. Utilizando ferramentas especiais e alavancas, profissionais moldam a lataria de dentro para fora, devolvendo a forma original com precisão. É ideal para pequenos/médios danos (granizo, batidas de porta), oferecendo reparo rápido, econômico e ecológico",
       icon: <Hammer className="w-7 h-7" />,
-      imageSrc: "/service4.jpg"
+      imageSrc: "/service4.png"
     }
   ]
 };

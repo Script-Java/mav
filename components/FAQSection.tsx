@@ -109,7 +109,7 @@ export default function FAQSection() {
       {/* Ambient background glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#ff4500]/[0.04] rounded-full blur-[120px] pointer-events-none" />
 
-      <div className="max-w-4xl mx-auto w-full relative z-10">
+      <div className="max-w-7xl mx-auto w-full relative z-10">
         <FramerReveal>
           <div className="text-center mb-16">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#ff4500]/10 border border-[#ff4500]/20 text-[#ff4500] text-sm font-medium mb-6">

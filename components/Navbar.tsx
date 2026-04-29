@@ -7,7 +7,19 @@ import { MapPin, Menu, X } from "lucide-react";
 
 const navLinks = [
   { href: "/", label: "Início" },
-  { href: "/servicos", label: "Serviços" },
+  { 
+    href: "/servicos", 
+    label: "Serviços",
+    subLinks: [
+      { href: "/servicos/estetica-automotiva", label: "Estética Automotiva" },
+      { href: "/servicos/funilaria-e-pintura", label: "Funilaria e Pintura" },
+      { href: "/servicos/martelinho-de-ouro", label: "Martelinho de Ouro" },
+      { href: "/servicos/pintura-automotiva-premium", label: "Pintura Automotiva Premium" },
+      { href: "/servicos/polimento-tecnico", label: "Polimento Técnico" },
+      { href: "/servicos/ppf", label: "PPF" },
+      { href: "/servicos/vitrificacao-ceramica", label: "Vitrificação Cerâmica" },
+    ]
+  },
   { href: "/projetos", label: "Projetos" },
   { href: "/sobre-nos", label: "Sobre Nós" },
   { href: "/contato", label: "Contato" },
@@ -60,13 +72,34 @@ export default function Navbar() {
             <div className="hidden md:flex flex-row items-center space-x-8">
               <div className="flex items-baseline space-x-8">
                 {navLinks.map((link) => (
-                  <Link
-                    key={link.href}
-                    href={link.href}
-                    className="hover:text-[#ff4500] transition-colors text-sm font-medium"
-                  >
-                    {link.label}
-                  </Link>
+                  <div key={link.href} className="relative group">
+                    <Link
+                      href={link.href}
+                      className="hover:text-[#ff4500] transition-colors text-sm font-medium py-4 flex items-center gap-1"
+                    >
+                      {link.label}
+                      {link.subLinks && (
+                        <svg className="w-3 h-3 transition-transform group-hover:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                        </svg>
+                      )}
+                    </Link>
+                    {link.subLinks && (
+                      <div className="absolute top-full left-0 w-64 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
+                        <div className="bg-[#0a0a0a]/95 backdrop-blur-xl border border-white/10 rounded-xl shadow-2xl p-2 flex flex-col mt-2">
+                          {link.subLinks.map(subLink => (
+                            <Link
+                              key={subLink.href}
+                              href={subLink.href}
+                              className="px-4 py-3 text-sm text-zinc-300 hover:text-white hover:bg-white/5 rounded-lg transition-colors"
+                            >
+                              {subLink.label}
+                            </Link>
+                          ))}
+                        </div>
+                      </div>
+                    )}
+                  </div>
                 ))}
               </div>
               <a
@@ -111,16 +144,31 @@ export default function Navbar() {
           isOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
-        <div className="flex flex-col pt-20 px-6 gap-2">
+        <div className="flex flex-col pt-20 px-6 gap-2 h-full overflow-y-auto pb-8">
           {navLinks.map((link) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              onClick={() => setIsOpen(false)}
-              className="py-3 px-4 rounded-xl text-white font-medium hover:bg-white/5 hover:text-[#ff4500] transition-colors"
-            >
-              {link.label}
-            </Link>
+            <div key={link.href} className="flex flex-col">
+              <Link
+                href={link.href}
+                onClick={() => !link.subLinks && setIsOpen(false)}
+                className="py-3 px-4 rounded-xl text-white font-medium hover:bg-white/5 hover:text-[#ff4500] transition-colors flex items-center justify-between"
+              >
+                {link.label}
+              </Link>
+              {link.subLinks && (
+                <div className="flex flex-col pl-4 mt-1 mb-2 border-l border-white/10 ml-6 gap-1">
+                  {link.subLinks.map(sub => (
+                    <Link
+                      key={sub.href}
+                      href={sub.href}
+                      onClick={() => setIsOpen(false)}
+                      className="py-2.5 px-4 rounded-lg text-zinc-400 text-sm hover:bg-white/5 hover:text-[#ff4500] transition-colors"
+                    >
+                      {sub.label}
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
           ))}
           <div className="mt-6 pt-6 border-t border-white/10">
             <a

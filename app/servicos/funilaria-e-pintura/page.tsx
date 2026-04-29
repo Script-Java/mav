@@ -29,7 +29,7 @@ export default function FunilariaPinturaPage() {
         <FadeIn delay={0.2}>
           <div className="relative aspect-[21/9] w-full rounded-3xl overflow-hidden mb-16 border border-white/10">
             <SafeImage
-              src="/assets/a2.jpeg"
+              src="/images/spray.png"
               alt="Processo de Funilaria e Pintura Premium"
               fill
               className="object-cover"
@@ -40,17 +40,9 @@ export default function FunilariaPinturaPage() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16 mb-20">
           <FadeIn delay={0.3}>
-            <h2 className="text-3xl font-bold text-white mb-6">Engenharia de Reparo Automotivo</h2>
+            <h2 className="text-3xl font-bold text-white mb-6">Pintura e Funilaria</h2>
             <div className="prose prose-invert prose-lg text-zinc-400 font-light">
-              <p>
-                Quando um veículo sofre uma colisão, o dano vai muito além da superfície. A integridade estrutural é comprometida, o que afeta diretamente a segurança e a dirigibilidade.
-              </p>
-              <p>
-                Nossa funilaria de precisão em Curitiba utiliza sistemas de medição computadorizados e alinhamento tridimensional. Cada ponto de fixação e junção é restaurado de acordo com as especificações exatas da montadora (OEM).
-              </p>
-              <p>
-                Não fazemos adaptações ou remendos. Trabalhamos exclusivamente com técnicas de soldagem ponto a ponto aprovadas pelas fabricantes de luxo, assegurando que o seu carro retorne às ruas com a mesma segurança de quando era zero quilômetro.
-              </p>
+              <p>Nosso serviço de pintura automotiva premium restaura a originalidade e o brilho de fábrica do seu veículo com técnicas de ponta. Inclui preparação minuciosa, uso de tintas de alta qualidade, aplicação de verniz (clear coat) de alta resistência, cura em cabine e polimento final. Garantimos acabamento impecável, durabilidade e cor uniforme</p>
             </div>
           </FadeIn>
 

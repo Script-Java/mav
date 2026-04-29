@@ -174,7 +174,7 @@ export default function SobreNosPage() {
         <FadeIn>
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-white tracking-tighter mb-5">
-              O Que Nos Diferencia
+              Nossos Diferenciais
             </h2>
             <p className="text-lg text-zinc-400 font-light max-w-2xl mx-auto">
               Tecnologia, expertise e uma abordagem consultiva que coloca o seu
@@ -251,7 +251,7 @@ export default function SobreNosPage() {
                 href="/contato"
                 className="inline-flex items-center gap-2 bg-[#ff4500] hover:bg-[#e03d00] text-white px-8 py-4 rounded-full font-semibold text-base transition-all shadow-lg shadow-[#ff4500]/25 hover:scale-105"
               >
-                Agendar uma Visita ao Estúdio
+                Agendar uma Visita
                 <ArrowRight className="w-5 h-5" />
               </Link>
               <a

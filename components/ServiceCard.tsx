@@ -14,7 +14,7 @@ interface ServiceCardProps {
 
 export default function ServiceCard({ title, description, icon, imageSrc }: ServiceCardProps) {
   return (
-    <motion.div 
+    <motion.div
       whileHover={{ y: -8, scale: 1.02 }}
       whileTap={{ scale: 0.98 }}
       transition={{ type: "spring", stiffness: 300, damping: 20 }}
@@ -22,14 +22,14 @@ export default function ServiceCard({ title, description, icon, imageSrc }: Serv
     >
       {/* Subtle top glow effect */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-1/2 h-[1px] bg-gradient-to-r from-transparent via-white/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
-      
+
       <div className="relative z-10 flex flex-col h-full">
         {imageSrc && (
-          <div className="relative w-full h-48 mb-6 rounded-2xl overflow-hidden border border-white/10 shrink-0">
-            <SafeImage 
-              src={imageSrc} 
-              alt={title} 
-              fill 
+          <div className="relative w-full h-64 mb-6 rounded-2xl overflow-hidden align-top border border-white/10 shrink-0">
+            <SafeImage
+              src={imageSrc}
+              alt={title}
+              fill
               sizes="(max-width: 768px) 100vw, 50vw"
               className={`object-cover ${title.includes("Funilaria") ? "object-bottom" : "object-center"}`}
             />
@@ -44,7 +44,7 @@ export default function ServiceCard({ title, description, icon, imageSrc }: Serv
         <p className="text-zinc-400 font-light leading-relaxed flex-grow text-base md:text-lg">
           {description}
         </p>
-        
+
         <Link href="/contato" className="mt-8 flex items-center text-sm font-medium tracking-wider uppercase text-zinc-400 group-hover:text-white transition-colors cursor-pointer w-max">
           <span className="mr-3">Explorar</span>
           <svg className="w-5 h-5 group-hover:translate-x-2 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -52,7 +52,7 @@ export default function ServiceCard({ title, description, icon, imageSrc }: Serv
           </svg>
         </Link>
       </div>
-      
+
       {/* Subtle hover background gradient */}
       <div className="absolute inset-0 bg-gradient-to-br from-white/[0.08] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
     </motion.div>
