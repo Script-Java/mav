@@ -21,6 +21,11 @@ const heroSlides = [
     title: "Martelinho de Ouro",
     subtitle: "O martelinho de ouro é uma técnica artesanal de funilaria que remove amassados de veículos sem danificar a pintura original. Utilizando ferramentas especiais e alavancas, profissionais moldam a lataria de dentro para fora, devolvendo a forma original com precisão. É ideal para pequenos/médios danos (granizo, batidas de porta), oferecendo reparo rápido, econômico e ecológico",
     backgroundImageSrc: "/hero-slide-3.jpg"
+  },
+  {
+    title: "Pintura e Funilaria",
+    subtitle: "Nosso serviço de pintura automotiva premium restaura a originalidade e o brilho de fábrica do seu veículo com técnicas de ponta. Inclui preparação minuciosa, uso de tintas de alta qualidade, aplicação de verniz (clear coat) de alta resistência, cura em cabine e polimento final. Garantimos acabamento impecável, durabilidade e cor uniforme",
+    backgroundImageSrc: "/hero-slide-4.png"
   }
 ];
 

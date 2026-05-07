@@ -19,7 +19,7 @@ const differentiators = [
     icon: <Users className="w-6 h-6" />,
     title: "Técnicos Especializados",
     description:
-      "Nossa equipe passa por rigorosos treinamentos constantes e possui certificação internacional chancelada pelas maiores marcas do setor. Somos especialistas dedicados em detalhamento, aplicação de PPF e Vitrificação Cerâmica.",
+      "Nossa equipe passa por rigorosos treinamentos constantes. Somos especialistas dedicados em detalhamento, aplicação de PPF e Vitrificação Cerâmica.",
   },
   {
     icon: <MessageCircle className="w-6 h-6" />,
