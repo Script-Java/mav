@@ -23,8 +23,8 @@ const heroSlides = [
     backgroundImageSrc: "/hero-slide-3.jpg"
   },
   {
-    title: "Pintura e Funilaria",
-    subtitle: "Nosso serviço de pintura automotiva premium restaura a originalidade e o brilho de fábrica do seu veículo com técnicas de ponta. Inclui preparação minuciosa, uso de tintas de alta qualidade, aplicação de verniz (clear coat) de alta resistência, cura em cabine e polimento final. Garantimos acabamento impecável, durabilidade e cor uniforme",
+    title: "Funilaria e Pintura",
+    subtitle: "Nosso serviço de funilaria automotiva premium restaura a originalidade e o brilho de fábrica do seu veículo com técnicas de ponta. Inclui preparação minuciosa, uso de tintas de alta qualidade, aplicação de verniz (clear coat) de alta resistência, cura em cabine e polimento final. Garantimos acabamento impecável, durabilidade e cor uniforme",
     backgroundImageSrc: "/hero-slide-4.png"
   }
 ];
